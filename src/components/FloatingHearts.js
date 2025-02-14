@@ -1,17 +1,21 @@
 import React from "react";
 import "./FloatingHearts.css"; // Import the updated CSS
 
+
+
+
 function FloatingHearts() {
   return (
-    <div className="fixed inset-0 h-screen w-screen pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-10">
       {Array.from({ length: 20 }).map((_, i) => (
         <span
           key={i}
-          className="heart"
+          className="heart absolute"
           style={{
             left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`, // Keep hearts within the section
             animationDelay: `${Math.random() * 5}s`,
-            animationDuration: `${Math.random() * 5 + 3}s`, // Longer floating duration
+            animationDuration: `${Math.random() * 6 + 4}s`, // Longer floating duration
             fontSize: `${Math.random() * 25 + 15}px`, // Random sizes between 15px - 40px
           }}
         >
@@ -23,6 +27,7 @@ function FloatingHearts() {
 }
 
 export default FloatingHearts;
+
 
 
 
