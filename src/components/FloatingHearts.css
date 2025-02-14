@@ -1,0 +1,21 @@
+@keyframes floatHearts {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-500px) scale(1.2); /* Midway floating higher */
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-750px) scale(1.5); /* Hearts float much higher */
+      opacity: 0;
+    }
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: -50px; /* Start slightly below */
+    animation: floatHearts ease-in-out infinite;
+  }
+  
