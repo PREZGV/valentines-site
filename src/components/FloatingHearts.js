@@ -7,7 +7,7 @@ import "./FloatingHearts.css"; // Import the updated CSS
 function FloatingHearts() {
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-10">
-      {Array.from({ length: 20 }).map((_, i) => (
+      {Array.from({ length: 80 }).map((_, i) => (
         <span
           key={i}
           className="heart absolute"
